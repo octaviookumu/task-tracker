@@ -25,11 +25,13 @@ function App() {
     const id = Math.floor(Math.random() * 10000) + 1
     const newTask = { id, ...task}
     setTasks([...tasks, newTask])
+    alert(`${task.text} deleted`)
   }
 
   // Delete Task
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id))
+    alert(`Task id ${id} deleted!`)
   }
 
   // Toggle Reminder
